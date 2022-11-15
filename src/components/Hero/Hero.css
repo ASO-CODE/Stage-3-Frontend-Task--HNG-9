@@ -1,0 +1,147 @@
+#hero {
+  padding: 4rem 2rem;
+}
+
+.hero-info {
+  margin: 0 auto;
+}
+
+.hero-info h1 {
+  color: var(--text-black);
+  font-size: 32px;
+  padding-bottom: 48px;
+  max-width: 400px;
+  text-align: center;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+.hero-info h1 span {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.hero-info p {
+  color: var(--text-black);
+  text-align: center;
+  padding-bottom: 48px;
+  font-size: 16px;
+}
+
+.hero-info .hero-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding-bottom: 48px;
+}
+
+.hero-input input {
+  height: 54px;
+  width: 70%;
+  padding-left: 1rem;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: 1px solid var(--search-outline);
+  font-size: 16px;
+  color: var(--text-black);
+}
+
+.hero-input input::placeholder {
+  color: var(--search-placeholder);
+}
+
+.hero-input input:focus {
+  outline: 0.05px solid var(--primary-color);
+}
+
+.hero-input button {
+  width: 30%;
+  height: 54px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: none;
+  font-size: 16px;
+  color: #ffffff;
+  background: var(--primary-color);
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.hero-input button:hover {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  background: white;
+}
+
+.hero-img {
+  margin: 0 auto;
+  width: 80%;
+  overflow: hidden;
+}
+
+.hero-img img {
+  width: 100%;
+}
+
+/***************** Media Query ************************/
+@media screen and (min-width: 800px) {
+  #hero {
+    padding: 2.7rem 4.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70vh;
+  }
+
+  .hero-info {
+    flex: 1;
+    margin: 0 2rem 0 0;
+  }
+
+  .hero-info h1 {
+    font-size: 32px;
+    max-width: 500px;
+    text-align: left;
+    margin: 0;
+  }
+
+  .hero-info p {
+    text-align: left;
+    font-size: 16px;
+  }
+
+  .hero-img {
+    text-align: right;
+    flex: 1;
+    width: 80%;
+    overflow: hidden;
+  }
+
+  .hero-img img {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #hero {
+    height: 90vh;
+  }
+
+  .hero-info {
+    flex: 1;
+    margin: 0 2rem 0 0;
+  }
+
+  .hero-info h1 {
+    font-size: 56px;
+    max-width: 500px;
+    text-align: left;
+    margin: 0;
+  }
+
+  .hero-info p {
+    text-align: left;
+    font-size: 24px;
+  }
+}
