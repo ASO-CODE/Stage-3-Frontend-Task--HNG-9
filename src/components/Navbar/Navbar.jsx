@@ -4,11 +4,20 @@ import OPEN from "../../assets/open.svg";
 import logo from "../../assets/Header Logo.svg";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+import Modal from "../Modal/Modal";
 
 const Navbar = () => {
+  const [openModal, setOpenModal] = useState(false);
   const [showLinks, setShowLinks] = useState(false);
   const linksContainerRef = useRef(null);
   const linksRef = useRef(null);
+
+
+  if (openModal) {
+    document.body.classList.add("active-modal");
+  } else {
+    document.body.classList.remove("active-modal");
+  }
 
   useEffect(() => {
     const linksHeight = linksRef.current.getBoundingClientRect().height;
@@ -61,9 +70,16 @@ const Navbar = () => {
                 </li>
               </Link>
             </ul>
-            <button type="button" className="header-btn">
+            <button
+              type="button"
+              className="header-btn"
+              onClick={() => {
+                setOpenModal(true);
+              }}
+            >
               Connect wallet
             </button>
+            {openModal && <Modal setOpenModal={setOpenModal} />}
           </div>
         </div>
       </div>

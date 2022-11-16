@@ -1,0 +1,99 @@
+.modalBackground {
+  z-index: 9999999;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(64, 64, 64, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContainer {
+  width: 80%;
+  height: 326px;
+  border-radius: 16px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0;
+}
+
+.modalTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px 24px 30px;
+}
+
+.modalTitle h1 {
+  font-size: 24px;
+  font-size: 700;
+}
+
+.modalTitle button {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.underline {
+  width: 100%;
+  padding-bottom: 1px;
+  background: #cfd8dc;
+  margin-bottom: 32px;
+}
+
+.subTitle {
+  font-size: 16px;
+  padding: 0 30px 16px 30px;
+}
+
+.walletConnectBtn, .metaMaskBtn{
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 30px 16px 30px;
+  border: 1px solid #CFD8DC;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #434343;
+}
+
+.metaMaskBtn{
+  background: #F8F9FA;
+}
+
+.walletConnectBtn span, .metaMaskBtn span{
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-left: 20px;
+}
+
+.walletConnectBtn span p, .metaMaskBtn span p{
+font-weight: bold;
+font-size: 24px;
+margin-left: 20px;
+text-decoration: none;
+}
+
+.chevron{
+  margin-right: 20px;
+}
+
+@media screen and (min-width: 600px) {
+  .modalContainer {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .modalContainer {
+    width: 40%;
+  }
+}
